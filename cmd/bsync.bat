@@ -1,2 +1,2 @@
-cd D:\2DAW\DWEC\RepDWEC\DWEC
+cd D:\2DAW
 browser-sync start --server --directory --files "**/*"
