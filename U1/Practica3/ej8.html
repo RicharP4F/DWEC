@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function rebaja(){
+        var precio = prompt("Introduce un precio");
+        var descuento = prompt("Introduce el descuento");
+        if (precio > 0) {
+          var precioFinal = precio * descuento / 100;
+          alert("El precio final es: " + (precio - precioFinal) + " €.");
+        }else {
+          alert("El número no es válido");
+        }
+      }
+      rebaja();
+    </script>
+  </body>
+</html>
