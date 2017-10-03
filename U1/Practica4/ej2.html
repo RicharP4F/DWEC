@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    var edad = prompt("Introduce la edad");
+    var mayorEdad = function (n){
+      var nNumero = parseInt(n) || 18;
+      console.log(nNumero);
+
+      if (isNaN(nNumero)){
+        console.log("Error");
+      }else {
+        console.log(nNumero);
+        if (nNumero >= 18){
+          return "Sí";
+        }else {
+          return "No";
+        }
+      }
+    }
+    var resultado = mayorEdad(edad);
+    console.log(resultado);
+    </script>
+  </body>
+</html>

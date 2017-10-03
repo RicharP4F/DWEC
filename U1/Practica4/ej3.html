@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    var mayorEdad = function (n){
+      var nNumero = parseInt(n) || 18;
+      console.log(nNumero);
+
+      if (isNaN(nNumero)){
+        console.log("Error");
+      }else {
+        console.log(nNumero);
+        if (nNumero >= 18){
+          return "Si";
+        }else {
+          return "No";
+        }
+      }
+    }
+      function datos(){
+        var edad = prompt("Introduce tu edad");
+        var nEdad = parseInt(edad);
+        var resultado = mayorEdad(nEdad);
+
+        if (resultado == "Si"){
+          var st = "<ul><li>Whisky</li><li>Cigarrillos</li><li>Condones</li><li>Marihuana!</li></ul>"
+          document.write(st);
+        }else {
+          document.write("<ul><li>Agua</li><li>Gominolas</li><li>Cómics</li></ul>");
+        }
+      }
+      datos();
+    </script>
+  </body>
+</html>
