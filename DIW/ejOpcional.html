@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ejOpcional</title>
+    <style media="screen">
+      *{font-family: serif;}
+      .h1{color: red; font-style: italic;}
+      #h2{color: orange; font-style: italic;}
+      p{background-color: yellow;}
+      div p{letter-spacing: 10px;}
+      p ~ ul{text-transform: capitalize;}
+      p::after{content: "LOL";}
+      p::before{content: "Im sexy";}
+      p::first-letter{color: pink;}
+      p::first-line{color: black;}
+      p:only-child{font-stretch: condensed;}
+      p:last-child{align-content: center;}
+      a:visited{color: navy;}
+      a:active{color: green;}
+      a:hover{color: gray;}
+      input:focus[type="text"] {background-color: gray;}
+      input:optional[type="text"]{font-size: 3px;}
+      input:required[type="text"]{font-style: normal;}
+    </style>
+
+  </head>
+  <body>
+    <h1 class="h1">Esto es un ejercicio opcional</h1>
+    <h2 id="h2">Esto es un ejercicio opcional</h2>
+    <p>Esto es un ejercicio opcional</p>
+    <div class="div">
+    <p>Esto es un ejercicio opcional</p>
+    </div>
+    <p><ul>
+      <li>Esto es un ejercicio opcional</li>
+      <li>Esto es un ejercicio opcional</li>
+      <li>Esto es un ejercicio opcional</li>
+    </ul></p>
+    <a href="http://www.google.es">Google.es</a>
+    <br><br>
+    <form action="/action_page.php">
+  <fieldset>
+    <legend>Personal information:</legend>
+    First name:<br>
+    <input type="text" name="firstname" value="Mickey"><br>
+    Last name:<br>
+    <input type="text" name="lastname" value="Mouse"><br><br>
+    <input type="submit" value="Submit">
+  </fieldset>
+</form>
+
+
+
+
+  </body>
+</html>
