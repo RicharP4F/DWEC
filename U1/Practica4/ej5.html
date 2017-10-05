@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+      function calcula(operacion){
+        var operando1=prompt("Introduce el primer operando.");
+        var operando2=prompt("Introduce el segundo operando.");
+        operando1=parseFloat(operando1);
+        operando2=parseFloat(operando2);
+        if(isNaN(operando1) || isNaN(operando2)){
+          alert("No has intoducido un número válido.");
+        }else {
+            var operador=prompt("Introduce el operador");
+            var resultado=eval(operando1 + operador + operando2);
+            if (isFinite(resultado)) {
+              document.write("El resultado de la operación es: " + resultado + ".");
+            }else {
+              alert("El resultado de la operación es Infinito.");
+            }
+        }
+          return resultado;
+      }
+      alert(calcula());
+    </script>
+  </body>
+</html>
