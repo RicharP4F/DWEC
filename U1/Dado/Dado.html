@@ -1,0 +1,38 @@
+
+<html>
+<head>
+</head>
+
+<body>
+    <script>
+        var cara0=new Image()
+        cara0.src="dado1.png"
+        var cara1=new Image()
+        cara1.src="dado2.png"
+        var cara2=new Image()
+        cara2.src="dado3.png"
+        var cara3=new Image()
+        cara3.src="dado4.png"
+        var cara4=new Image()
+        cara4.src="dado5.png"
+        var cara5=new Image()
+        cara5.src="dado6.png"
+    </script>
+
+
+    <img src="" name="dado">
+
+    <form>
+    <input type="button" value="Lanza el dado" onClick="lanzar()">
+    </form>
+
+    <script>
+    function lanzar()
+    {
+        var random = Math.round(Math.random()*5);
+        document.images["dado"].src=eval("cara" + random + ".src");
+    }
+    </script>
+
+</body>
+</html>
