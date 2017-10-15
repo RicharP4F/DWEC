@@ -1,0 +1,61 @@
+table, tr, td{
+  border: 2px solid black;
+  border-collapse: collapse;
+}
+table{
+  margin: auto;
+  table-layout: auto;
+}
+
+thead{
+  text-align: center;
+}
+
+
+.img1{
+  background-image: url("CSS3.png");
+  background-size: 50px 50px;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size:contain;
+  text-align: right;
+  height: 80px;
+  width: 120px;
+
+}
+.img2{
+  background-image: url("html5.png");
+  background-size: 50px 50px;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size:contain;
+  text-align: right;
+  height: 80px;
+  width: 120px;
+
+}
+.bottom{
+  text-align: center;
+  vertical-align: bottom;
+}
+.white{
+  background-color: white;
+}
+.gray{
+  background-color: lightgray;
+}
+a:link{
+  text-decoration: none;
+  color: black;
+}
+a:hover{
+  background-color: lightyellow;
+}
+
+
+caption{
+  caption-side: bottom;
+  font-style: italic;
+  font-size: 8px;
+  text-align: left;
+}

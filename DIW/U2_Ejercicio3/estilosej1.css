@@ -1,0 +1,140 @@
+ul,ul li{
+  margin:0;padding:0;list-style:none;
+}
+h1,h2,h3,p,form{
+  margin:0;padding:0;
+}
+.clear{
+  clear:both;
+}
+img{
+  border:none;
+}
+#contenedor{
+  width:90%;max-width:900px;
+  width:expression(document.body.clientWidth> 901? "900px":"auto")
+  ;margin:0 auto;
+}
+#cabecera,#menu,#lateral,#contenido,#contenido #principal,#contenido #secundario,#pie{
+  border:2px solid #777;
+}
+#cabecera{
+  clear:both;
+}
+#menu{
+  clear:both;
+}
+#lateral{
+  float:left;width:20%;
+}
+#contenido{
+  float:right;width:78%;
+}
+#contenido #principal{
+  float:left;width:78%;
+}
+#contenido #secundario{
+  float:right;width:20%;
+}
+#pie{
+  clear:both;
+}
+#cabecera #logo{
+  float:left;
+}
+#cabecera #buscador{
+  float:right;
+}
+#menu ul#menu_principal li{
+  display:inline;float:left;
+}
+#contenido #principal .articulo img{
+  width:100px;float:left;
+}
+#pie .enlaces{
+  float:left;
+}
+#pie .copyright{
+  float:right;
+}
+#cabecera,#menu,#lateral,#lateral #noticias,#lateral #patrocinadores,#contenido,#contenido #principal,#contenido #secundario,#pie{
+  padding:.5em;
+}
+#lateral{
+  padding:0;
+}
+#cabecera{
+  padding:1em;
+}
+#menu{
+  margin-bottom:.5em;
+}
+#contenido{
+  width:77%;padding:0;
+}
+#contenido #principal{
+  width:73%;
+}
+#pie{
+  padding:.5em 0;margin-top:1em;
+}
+#contenido #principal .articulo{
+  margin-bottom:1em;
+}
+#contenido #principal .articulo img{
+  margin:.5em;
+}
+#lateral #patrocinadores{
+  margin-top:1em;
+}
+
+/*Modificaciones*/
+
+#cabecera{
+  padding: 1em;
+}
+#menu{
+  padding: .5em;
+  margin-bottom: .5em;
+}
+#noticias, #patrocinadores, #principal, #secundario{
+  padding: .5em;
+}
+#pie{
+  padding-left: 0em;
+  padding-right: 0em;
+  padding-top: .5em;
+  padding-bottom: .5em;
+}
+.articulo{
+  margin: 1em;
+}
+.articulo img{
+  margin: .5em;
+}
+#patrocinadores{
+  margin-top: 1em;
+}
+#pie{
+  margin-top: 1em;
+}
+#cabecera,#menu,#lateral,#contenido,#contenido #principal,#contenido #secundario,#pie{
+  border:0px solid #777;
+}
+#menu{
+  border-bottom: 3px solid #004C99;
+  /*Aunque en el ejercicio dice border de 1px, no encaja en como debe quedar la página en el resultado final, así que le he puesto 3px para que se asemeje más.*/
+}
+#noticias{
+  border: 1px solid #C5C5C5;
+}
+#patrocinadores{
+  border: 1px dotted #CC6600;
+}
+ #secundario{
+  border: 1px solid #CC6600 !important;
+}
+#pie{
+  border-top: 1px solid #C5C5C5;
+  border-bottom: 1px solid #C5C5C5;
+}

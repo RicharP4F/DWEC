@@ -1,0 +1,26 @@
+*{
+  color: darkblue;
+  font-family: "Verdana";
+  font-weight: .9em;
+  line-height: 1.4em;
+}
+h1{
+  width: 80px;
+  overflow-wrap: break-word;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  text-transform: capitalize;
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 10px
+}
+p{
+  text-indent: 1cm;
+}
+a:link{
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: underline;
+}

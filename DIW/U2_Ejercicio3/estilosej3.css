@@ -1,0 +1,19 @@
+body{
+  background-image: url("imagen.png");
+}
+h1{
+  background-image: url("https://1.bp.blogspot.com/_sD9yQTE5QZQ/SGvRFJbT6QI/AAAAAAAADg4/5Ot2-aTA4_w/s400/blue1961.jpg");
+  border: 2px solid white;
+  color: white;
+}
+a{
+  margin: 2em; float: left; clear: left;
+}
+.pdf {
+  color: #E37529;
+  padding: 0 0 0 18px;
+  background-image: url("pdf.png");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
