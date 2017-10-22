@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Constructor</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function Persona(nombre,apellidos){
+        this.nombre=nombre || "Anónimo";
+        this.apellidos=apellidos;
+        this.Saludar=function(){
+          console.log("Hola me llamo " + this.nombre + " " + this.apellidos);
+        }
+      }
+
+      var Persona1 = new Persona("Juan","Montés");
+      var Persona2 = new Persona("","Pérez");
+
+      Persona1.Saludar();
+      Persona2.Saludar();
+
+      if(Persona1 instanceof(Persona)){
+        alert("Persona1 es una instacia de Persona")
+      }else {
+        alert("Persona1 no es una instacia de Persona")
+      }
+      if(Persona2 instanceof(Persona)){
+        alert("Persona2 es una instacia de Persona")
+      }else {
+        alert("Persona2 no es una instacia de Persona")
+      }
+      document.write("Persona 1 tiene los siguientes atributos: " + Object.keys(Persona1) + "<br />");
+      document.write("Persona 2 tiene los siguientes atributos: " + Object.keys(Persona2));
+
+    </script>
+  </body>
+</html>

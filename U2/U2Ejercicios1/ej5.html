@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Constructor</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function Persona(nombre,apellidos){
+        this.nombre=nombre || "Anónimo";
+        this.apellidos=apellidos;
+        this.Saludar=function(){
+          console.log("Hola me llamo " + this.nombre + " " + this.apellidos);
+        }
+      }
+
+      var Persona1 = new Persona("Juan","Montés");
+      var Persona2 = new Persona("","Pérez");
+
+      Persona1.telefono=675740132;
+
+      Persona.prototype.Edad = Math.floor(Math.random() * 99 + 1);
+      Persona.prototype.CumplirAnyo = function(){
+        return this.Edad + 1;
+      }
+
+      document.write("Persona 1 tiene los siguientes atributos: " + Object.keys(Persona1) + "<br />");
+      document.write("Persona 2 tiene los siguientes atributos: " + Object.keys(Persona2));
+      for (var v in Persona1) {
+        console.log(Persona1[v]);
+      }
+      for (var v in Persona2) {
+        console.log(Persona2[v]);
+      }
+
+    </script>
+  </body>
+</html>

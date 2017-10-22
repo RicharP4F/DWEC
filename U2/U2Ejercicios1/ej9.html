@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Lista Separada</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+    function Persona(nombre,apellidos){
+      this.nombre=nombre || "Anónimo";
+      this.apellidos=apellidos;
+      this.Saludar=function(){
+        console.log("Hola me llamo " + this.nombre + " " + this.apellidos);
+      }
+    }
+
+    function Estudiante(nombre,apellidos,estudios,notaMedia){
+      Persona.call(this,nombre,apellidos);
+      this.estudios=estudios;
+      this.notaMedia=notaMedia.toFixed(2);
+      this.Recuperar=function(){
+        if(this.notaMedia < 5){
+          this.notaMedia=5;
+        }
+      }
+    }
+
+    var Estudiante1 = new Estudiante("Ricardo","Montés Lozano","Superiores",7);
+    var Estudiante2 = new Estudiante("Alberto","Hernández Baggetto","Superiores",8);
+    var Estudiante3 = new Estudiante("Sergio","Guillén Coso","Superiores",9);
+
+    var Lista = new Array(Estudiante1,Estudiante2,Estudiante3);
+
+    for (var atributos in Lista) {
+      console.log("El estudiante de " + Lista[atributos].estudios + ", " + Lista[atributos].nombre + " " + Lista[atributos].apellidos + " tiene una nota media de " + Lista[atributos].notaMedia);
+    }
+
+    for(var i=0;i<Lista.lenght;i++){
+      var apellidos=(Lista[i].apellidos).split(" ");
+      document.write("Nombre: " + Lista[i].nombre + "; " + "Primer Apellido: " + apellidos[0] + "; " + "Segundo Apellido: " + apellidos[1] + "<br />");
+    }
+
+
+
+    </script>
+  </body>
+</html>

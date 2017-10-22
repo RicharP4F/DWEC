@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Objetos</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var coche1 = new Object();
+      coche1.Marca="Citröen";
+      coche1.Ruedas="2";
+      coche1.Plazas="5";
+      coche1.Color="gris";
+      var coche2 = new Object();
+      coche2.Marca="BMW";
+      coche2.Ruedas="2";
+      coche2.Plazas="2";
+      coche2.Color="Rojo";
+      delete coche1.Plazas;
+      var pintar=function(){
+        this.Color="white";
+      }
+      coche1.pintar = pintar;
+      console.log(Object.keys(coche1));
+      console.log(Object.keys(coche2));
+    </script>
+  </body>
+</html>
