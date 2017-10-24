@@ -17,16 +17,24 @@
         background-color: darkgray;
         color: green;
       }
-
+      .display{
+        display: none;
+      }
+      .display1:hover .display{
+        color: black;
+        overflow: hidden;
+        display:block;
+        list-style-type: square;
+      }
     </style>
 
   </head>
   <body>
     <ul>
-      <li>Elemento 1</li>
+      <li class="display1">Elemento 1<ul class="display"><li>Submenú 1</li><li>Submenú 2</li><li>Submenú 3</li></ul></li>
       <li>Elemento 2</li>
       <li>Elemento 3</li>
-      <li>Elemento 4</li>
+      <li class="display1">Elemento 4<ul class="display"><li>Submenú 1</li><li>Submenú 2</li><li>Submenú 3</li></ul></li>
       <li>Elemento 5</li>
       <li>Elemento 6</li>
     </ul>
