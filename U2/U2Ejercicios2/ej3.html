@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ejercicio 3</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    var array = [0,1,2,3];
+    var array1 = [-2,-1];
+    var concat1 = array1.concat(array);
+    // array.splice(0,0,"-2","-1");
+    console.log(concat1.toString());
+    var array2 = [4,5];
+    var concat2 = concat1.concat(array2);
+    // array.splice(7,0,"4","5");
+    console.log(concat2.toString());
+    concat2.splice(3,3);
+    concat2.splice(4,0,10,25);
+    console.log(concat2.join("==>"));
+    concat3=concat2;
+    concat3.reverse();
+    console.log(concat2);
+    console.log(concat3);
+    // Ambos arrays se modifican, porque ambos apuntan a la misma dirección de memoria, no son dos arrays distintas, son la misma.
+    console.log("El elemento '25' se encuentra en el index: " + concat3.indexOf(25));
+    console.log("El elemento '100' se encuentra en el index: " + concat3.indexOf(100));
+    </script>
+  </body>
+</html>

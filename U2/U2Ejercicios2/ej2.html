@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Vacaciones</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    var vacaciones = prompt("Introduce la fecha de tus vacaciones con formato 'aaaa/mm/dd'");
+    var vaca = new Date(vacaciones);
+    var hoy = new Date();
+    var diferenciaMili = vaca - hoy;
+    console.log("El tiempo hasta tus vacaciones es de: " + diferenciaMili + " milisegundos.");
+    console.log("El tiempo hasta tus vacaciones es de: " + Math.trunc(diferenciaMili / 1000) + " segundos.")
+    </script>
+  </body>
+</html>

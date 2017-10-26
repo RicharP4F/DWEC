@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Fecha</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    var fecha = new Date();
+    console.log(fecha.getDate());
+    console.log(fecha.getMonth());
+    console.log(fecha.getYear());
+    var dias2 = fecha.getDay();
+    var dias = new Array("Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado");
+    console.log(dias[dias2] );
+    console.log(fecha.getDate() + "/" + fecha.getMonth() + "/" + fecha.getFullYear());
+    console.log(fecha.getHours());
+    console.log(fecha.getDate() + "/" + fecha.getMonth() + "/" + fecha.getFullYear() + " " + fecha.getHours() + ":" + fecha.getMinutes() + ":" + fecha.getSeconds());
+    </script>
+  </body>
+</html>
