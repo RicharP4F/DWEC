@@ -30,21 +30,20 @@
 
 
 
-
+      console.log(concat3.every(function(number){
+        return typeof(number)=="number";
+      }));
 
       console.log(concat3.some(function(num){
         return num < 20;
       }));
 
-      var a = [4,21,33,12,9,54];
-      function getSum(total,num){
+      var a = [4, 21, 33, 12, 9, 54];
+
+      console.log(a.reduce(function(total, num){
         return total + num;
-      }
-      function myFunction(){
-         var reduce = a.reduce(getSum);
-         return reduce;
-      }
-      console.log(reduce);
+      }));
+
 
     </script>
   </body>

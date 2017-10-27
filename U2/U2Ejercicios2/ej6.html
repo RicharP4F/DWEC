@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ejercicio 6</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+    var array = [1,"si",true,2,"no",false];
+
+    var array1 = array.map(function(num){
+      return Number(num);
+    });
+    console.log(array1);
+
+
+    console.log(array1.filter(function(num){
+      return (!isNaN(num));
+    }));
+
+    </script>
+  </body>
+</html>

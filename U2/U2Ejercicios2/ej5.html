@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ejercicio 5</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    function Persona(nombre,apellidos){
+      this.nombre=nombre || "Anónimo";
+      this.apellidos=apellidos;
+      this.Saludar=function(){
+        console.log("Hola me llamo " + this.nombre + " " + this.apellidos);
+      }
+    }
+
+    function Estudiante(nombre,apellidos,estudios,notaMedia){
+      Persona.call(this,nombre,apellidos);
+      this.estudios=estudios;
+      this.notaMedia=notaMedia.toFixed(2);
+      this.Recuperar=function(){
+        if(this.notaMedia < 5){
+          this.notaMedia=5;
+
+        }
+      }
+      this.toString = function(){
+        return this.nombre + "(" + this.notaMedia + ")";
+      }
+    }
+
+
+    var Estudiante1 = new Estudiante("Ricardo","Montés Lozano","Superiores",7);
+    var Estudiante2 = new Estudiante("Alberto","Hernández Baggetto","Superiores",8);
+    var Estudiante3 = new Estudiante("Sergio","Guillén Coso","Superiores",9);
+
+    var Lista = new Array(Estudiante1,Estudiante2,Estudiante3);
+
+    Lista.sort(function(e1,e2){
+      return e1.notaMedia - e2.notaMedia;
+    });
+
+    console.log(Lista.toString());
+
+    </script>
+  </body>
+</html>
