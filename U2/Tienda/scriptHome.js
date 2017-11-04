@@ -1,10 +1,16 @@
 var p = new Surtido(productos);
-//var miCompra =[productos[0], productos[3]];
-p.dibujarSurtido(miCompra);
+p.dibujarSurtido();
 function recarga(){
 
 }
 function verPorPrecioMas(p){
   p.ordenPrecioMas();
   p.dibujarSurtido();
+}
+function verPorPrecioMenos(p){
+  p.ordenPrecioMenos();
+  p.dibujarSurtido();
+}
+function verVegano(p){
+  p.
 }

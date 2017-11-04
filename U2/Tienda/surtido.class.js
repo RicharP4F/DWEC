@@ -4,7 +4,7 @@ function Surtido(productos){
     cuerpo.innerHTML = "";
     var str = "";
     if (produ == undefined){
-      for (var i = 0; i < this.productos.lenght; i++) {
+      for (var i = 0; i < this.productos.length; i++) {
         str += "<div>";
         str += "<img src='" + this.productos[i].foto + "' alt = '";
         str += this.productos[i].nombre + "'>";
@@ -12,9 +12,9 @@ function Surtido(productos){
         str += "<p><b>" + this.productos[i].precio + "€</b></p>";
         str += "</div>";
       }
-      cuerpo.innerHTML = str;
     }else {
-      for (var i = 0; i < produ.lenght; i++) {
+
+      for (var i = 0; i < produ.length; i++) {
         str += "<div>";
         str += "<img src='" + produ[i].foto + "' alt = '";
         str += produ[i].nombre + "'>";
@@ -23,6 +23,20 @@ function Surtido(productos){
         str += "</div>";
     }
   }
+  console.log(str);
   cuerpo.innerHTML = str;
 }
+  this.ordenPrecioMas = function(produ){
+    productos.sort(function(a,b){
+      return (a.precio - b.precio);
+    });
+  }
+  this.ordenPrecioMenos = function(produ){
+    productos.sort(function(a,b){
+      return (b.precio - a.precio);
+  });
+  }
+  this.ordenVegano = function(produ){
+    productos.sort(function())
+  }
 }

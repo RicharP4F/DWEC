@@ -1,0 +1,181 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.h1cabecera h1{
+  font-size: 36px;
+  font-family: "Helvetica";
+  font-weight: bold;
+  padding-left: 10px;
+}
+.h1cabecera{
+  display: table-cell;
+  text-align: left;
+  vertical-align: middle;
+}
+.section1{
+  border: 2px solid lightgray;
+  background-color: linen;
+  padding-left: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-right: 20px;
+  margin-left: 50px;
+  margin-top: 42px;
+  width: 960px;
+}
+.section2{
+  border: 2px solid lightgray;
+  background-color: linen;
+  padding-left: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-right: 20px;
+  margin-left: 50px;
+  margin-top: 10px;
+  width: 960px;
+}
+.section1 h1{
+  font-size: 24px;
+  font-family: "Verdana";
+  font-weight: bold;
+}
+.section2 h1{
+  font-size: 24px;
+  font-family: "Verdana";
+  font-weight: bold;
+}
+.section1 h2{
+  font-size: 14px;
+  font-family: "Verdana";
+  font-weight: bold;
+}
+.section2 h2{
+  font-size: 14px;
+  font-family: "Verdana";
+  font-weight: bold;
+}
+.nav{
+  display: table-cell;
+  padding-left: 490px;
+  padding-top: 20px;
+}
+.nav h2{
+  font-size: 14px;
+  font-family: "Verdana";
+  font-weight: bold;
+}
+.nav a:link{
+  text-decoration: none;
+}
+.nav a:hover{
+  color: blue;
+}
+.nav ul{
+  list-style-type: none;
+  padding: 10px;
+}
+.nav ul li{
+  display: inline-block;
+  margin: 10px;
+}
+.nav a{
+ background-color: steelblue;
+ color: white;
+ text-decoration: none;
+ padding: 10px;
+}
+.aside{
+  background-color: lightgray;
+  margin-top: 42px;
+  float: right;
+  height: 80px;
+  width: 250px;
+  padding-top: 20px;
+  padding-left: 20px;
+  margin-right: 60px;
+}
+.aside ul, li{
+  list-style: none;
+}
+.aside > li{
+  float: left;
+}
+.aside li a{
+  background-color: lightgray;
+  color: white;
+  display: block;
+  text-decoration: none;
+}
+.aside li a:hover{
+  background-color: linen;
+}
+.aside li ul{
+  display: none;
+  position: absolute;
+  min-width: 100px;
+}
+.aside li:hover > ul{
+  display: block;
+}
+.aside li ul li {
+  position: relative;
+}
+.aside li ul li ul{
+  right: -140px;
+  top: 0px;
+}
+.header{
+  width: 100%;
+  position: fixed;
+  display: table;
+  background-color:lightblue;
+}
+.footer{
+  width: 100%;
+  text-align: center;
+}
+.cuerpo{
+  padding-top: 100px;
+}
+html, body{
+  height: 100%;
+}
+.logo{
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.logo img{
+  width: 100px;
+  height: 100px;
+}
+html, body{
+  height: 100%;
+}
+body{
+  display: flex;
+  flex-direction: column;
+}
+.cuerpo{
+  flex: 1 0 auto;
+}
+.publicado{
+  color: lightgray;
+}
+.section1 figcaption{
+  font-style: italic;
+}
+figcaption{
+  margin-top: 5px;
+}
+footer a{
+  float: right;
+  text-decoration: none;
+}
+footer{
+  margin-top: 30px;
+}

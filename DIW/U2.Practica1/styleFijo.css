@@ -1,0 +1,125 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+html, body{
+  height: 100%;
+}
+.container{
+  min-height: 100%;
+  margin-bottom: -50px;
+}
+header .container{
+  width:100%;
+  height: auto;
+  background-color:lightblue;
+  display: table;
+  padding: 10px;
+}
+.container h1{
+  font-size: 36px;
+  font-family: "Helvetica";
+  font-weight: bold;
+}
+.logo{
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.logo img{
+  width: 100px;
+  height: 100px;
+}
+h1{
+  display: table-cell;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 24px;
+  font-family: "Verdana";
+  font-weight: bold;
+}
+h2{
+
+}
+nav{
+  float:right;
+}
+nav ul{
+  list-style-type: none;
+  padding: 10px;
+}
+ nav ul li{
+  display: inline-block;
+  margin: 10px;
+  padding-top: 10px;
+}
+ nav a{
+  background-color: steelblue;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+section{
+  width: 960px;
+  height: 500px;
+  margin-left: 50px;
+  margin-top: 5px;
+  padding-left: 20px;
+}
+ aside{
+   float: right;
+   background-color: lightgray;
+   margin-right: 100px;
+   margin-top: 5px;
+   height: 80px;
+   width: 220px;
+   padding-top: 20px;
+   padding-left: 10px;
+ }
+  .display{
+    display: none;
+  }
+  .menu2 ul{
+    list-style-type: none;
+  }
+  .entrada1{
+    border: 2px solid lightgray;
+    background-color: linen;
+    padding-left: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 20px;
+  }
+  .entrada2{
+    border: 2px solid lightgray;
+    background-color: linen;
+    padding-left: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 20px;
+  }
+  .entrada1 a{
+    float: right;
+
+  }
+  .entrada2 a{
+    float: right;
+  }
+  .entrada1 figcaption{
+    font-style: italic;
+  }
+  .publicado{
+    color: lightgray;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .footer{
+  width: 100%;
+  text-align: center;
+}
+.footer, .push{
+  height: 50px;
+}
