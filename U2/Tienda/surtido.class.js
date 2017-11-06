@@ -36,7 +36,14 @@ function Surtido(productos){
       return (b.precio - a.precio);
   });
   }
-  this.ordenVegano = function(produ){
-    productos.sort(function())
+  this.filtrarVegano = function(){
+    var vegano = new Array();
+
+    for (var i in productos) {
+      if (productos[i].vegano == true) {
+        vegano.push(productos[i]);
+      }
+    }
+    return vegano;
   }
 }
