@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ejercicio 1</title>
+    <script type="text/javascript">
+
+    function anadirElemento(){
+      var txt = document.getElementsByTagName("input")[0]
+      if(txt.value == "" || selector.value == 0){
+        alert("Introduce un producto y una categoria");
+      }else{
+        var miP = document.createElement("p");
+        miP.innerHTML = txt.value;
+        document.body.appendChild(miP);
+        miP.style.color = selector.value;
+        miP.setAttribute("onclick", "borrarElemento()");
+      }
+    }
+    function borrarElemento(){
+      
+    }
+    </script>
+  </head>
+  <body>
+    <h1>Lista de la compra</h1>
+    <input type="text" name="texto"></input>
+    <select id="selector" name="selector">
+      <option value=0>Escoge una opción</option>
+      <option value="red">Carnicería</option>
+      <option value="navy">Pescadería</option>
+      <option value="cyan">Congelados</option>
+      <option value="gold">Panadería</option>
+      <option value="magenta">Perfumería</option>
+    </select>
+    <button onclick="anadirElemento()">Añadrir elemento</button>
+    <button onclick="borrarLista()">Borrar lista</button>
+    <hr>
+  </body>
+</html>
+
+
+ <!-- var txt = document.getElementsByTagName("input")[0]
+ txt.value == "" (diferente de vacio acción)
+
+ document.getElementById("selector")
+ selector.value != 0 (diferente de 0 acción)
+
+ (cambiar color de h1)
+ document.querySelector("h1")
+ document.querySelector("h1").style.color ="cyan"
+
+ var miIp = document.createElement("p");
+ miIp.innerHTML = txt.value
+ (otra forma de hacerlo)
+ var textoCaja = docuemnt.createTextNode(txt.value);
+ miIP.appendChild(textoCaja)
+
+ document.body.appendChild(miIP)
+
+ miIp.style.color = selector.value
+
+ miIp.setAttribute("onclick", "borrarElemento()"); -->
