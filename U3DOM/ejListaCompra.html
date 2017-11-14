@@ -17,9 +17,16 @@
         miP.setAttribute("onclick", "borrarElemento()");
       }
     }
-    function borrarElemento(){
-      
+    function borrarLista(){
+      var miP2 = document.querySelectorAll('p');
+      for(var i=0;i<miP2.length;i++){
+      miP2[i].parentNode.removeChild(miP2[i]);
+      }
     }
+    function borrarElemento(){
+      document.body.removeChild(document.querySelector('p:hover'));
+    }
+
     </script>
   </head>
   <body>
@@ -40,24 +47,4 @@
 </html>
 
 
- <!-- var txt = document.getElementsByTagName("input")[0]
- txt.value == "" (diferente de vacio acción)
-
- document.getElementById("selector")
- selector.value != 0 (diferente de 0 acción)
-
- (cambiar color de h1)
- document.querySelector("h1")
- document.querySelector("h1").style.color ="cyan"
-
- var miIp = document.createElement("p");
- miIp.innerHTML = txt.value
- (otra forma de hacerlo)
- var textoCaja = docuemnt.createTextNode(txt.value);
- miIP.appendChild(textoCaja)
-
- document.body.appendChild(miIP)
-
- miIp.style.color = selector.value
-
- miIp.setAttribute("onclick", "borrarElemento()"); -->
+ 
