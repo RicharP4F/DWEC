@@ -26,35 +26,42 @@ onload = function cargaInfo(){
 	/*Aquí tengo que crear los nodos del DOM*/
     var titulo = document.createElement("h1");
     var titulo1 = document.createTextNode("La saga Star Wars");
-		titulo.style.color="yellow";
+		titulo.style.color="blue";
 		titulo.style.fontSize="xx-large";
     titulo.appendChild(titulo1);
     document.body.appendChild(titulo);
 
 		var divTabla = document.createElement("div");
-		divTabla.style.display="table";
 		document.body.appendChild(divTabla);
 
-		for(var i=0;i<8;i++){
-			var fila = document.createElement("div");
-			fila.style.display="table-row";
-		}
-			for(var celdas in StarWarsFilms){
-				var celdas = document.createElement("div");
-				celdas.innerHTML = StarWarsFilms[i];
-				fila.appendChild(celdas);
-			}
-			divTabla.appendChild(fila);
-}
+		var divFila = document.createElement("div");
+		divTabla.appendChild(divFila);
 
-// 	// /*Recorro el array de objetos:*/
-// 	StarWarsFilms.forEach(function(objectoPeli){
-// 	//   /*Recorro los campos del objeto*/
-// 	  for (campo in objectoPeli){
-// 			console.log("El " + campo + " de la película es : " + objectoPeli[campo]);
-// 	  }
-// 	});
-// } //Cierro cargaInfo
+		var divCelda, texto;
+
+		for(var campo in StarWarsFilms[0]){
+			divCelda = document.createElement("div");
+			texto = document.createTextNode(campo);
+			divCelda.appendChild(texto);
+			divFila.appendChild(divCelda);
+			divCelda.setAttribute("class","columna");
+			divCelda.style.fontWeight="bold";
+		}
+
+	// /*Recorro el array de objetos:*/
+	StarWarsFilms.forEach(function(objectoPeli){
+		divFila = document.createElement("div");
+	//   /*Recorro los campos del objeto*/
+	  for (campo in objectoPeli){
+			divCelda = document.createElement("div");
+			texto = document.createTextNode(objectoPeli[campo]);
+			divCelda.appendChild(texto);
+			divFila.appendChild(divCelda);
+			divCelda.setAttribute("class","columna");
+	  }
+		divTabla.appendChild(divFila);
+	});
+} //Cierro cargaInfo
 </script>
 </head>
 <body>
