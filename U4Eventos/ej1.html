@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ejercicio 1</title>
+    <script type="text/javascript">
+      function func1(){
+        h2.style.color="red";
+      }
+      onload = function(){
+        h3.onwheel=function(e){
+          h3.style.backgroundColor="blue";
+        }
+      }
+      function eventoP(e){
+        e.preventDefault();
+        contenido.style.border = '3px solid red';
+      }
+      oncontextmenu = eventoP;
+      onmousemove = function(e){
+        p.style.fontWeight="bold";
+        p.style.fontStyle="italic";
+      }
+    </script>
+  </head>
+  <body>
+    <div id="contenido">
+      <h1 id="h1" onclick="alert('Has hecho click en el H1')">Esto es un título H1 (Haz click)</h1>
+      <br>
+      <h2 id="h2" ondblclick="func1();">Esto es un título H2 (Haz doble click)</h2>
+      <br>
+      <h3 id="h3">Esto es un título H3 (Mueve la rueda del ratón)</h3>
+      <br>
+      <p id="p">Esto es un párrafo (Mueve el ratón)</p>
+      Todo lo que engloba el borde es un DIV (Haz click derecho)
+    </div>
+  </body>
+</html>
