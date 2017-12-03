@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ejercicio 10</title>
+    <script type="text/javascript">
+      function magia(){
+          var x = cambio.value;
+          if (cambio.value == "100") {
+            imagen.style.width = "100px";
+          }else if(cambio.value == "200"){
+            imagen.style.width = "200px";
+          }else if(cambio.value == "400"){
+            imagen.style.width = "400px";
+          }else{
+            imagen.style.width = "600px";
+          }
+        }
+    </script>
+  </head>
+  <body>
+    <img id="imagen" src="imagen.gif" width="200px">
+    <br>
+    <h1>Cambiar el tamaño de la imagen:</h1>
+    <select id="cambio" onchange="magia()">
+      <option value="nada">
+      <option value="100">100px
+      <option value="200">200px
+      <option value="400">400px
+      <option value="600">600px
+    </select>
+  </body>
+</html>

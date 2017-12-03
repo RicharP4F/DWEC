@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ejercicio 6</title>
+  </head>
+  <body>
+	   <script type="text/javascript">
+	    var unTexto = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+		    onload = function(){
+			       document.body.innerHTML = unTexto;
+			          onkeydown = crece;
+	             }
+		    var a = true;
+		    function crece(){
+				  if (a && event.shiftKey) {
+					   document.body.innerHTML = unTexto.toUpperCase();
+					    a = false;
+				  }else if(a == false){
+					   document.body.innerHTML = unTexto.toLowerCase();
+				       }
+		    }
+	   </script>
+  </body>
+</html>

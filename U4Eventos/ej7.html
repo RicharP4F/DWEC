@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ejercicio 7</title>
+    <script type="text/javascript">
+
+    onload = function() {
+      onkeydown = especial;
+      onkeypress = caracter;
+    }
+    var especial;
+    function especial(e){
+      esp = e.altKey || e.ctrlKey || e.shiftKey || e.metaKey;
+      if (esp){
+      var mensaje = '';
+      console.log("Has pulsado una tecla especial");
+      }
+    }
+
+    function caracter(e) {
+      var texto = '';
+      texto = "Tecla " + e.key +" que es la numero: "+ e.charCode+"<br>";
+      txt.innerHTML += texto;
+    }
+    </script>
+  </head>
+    <body>
+      <h1>Pulsa en el teclado</h1>
+      <div id="txt"> </div>
+    </body>
+</html>
