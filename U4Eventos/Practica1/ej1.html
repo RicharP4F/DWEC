@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ejercicio Regalos</title>
+    <style media="screen">
+      body{
+        text-align: center;
+        background-image: url("http://1920x1080hdwallpapers.com/image/201510/games/2356/enigma-black-and-white-batman-arkham-origins.jpg");
+        background-repeat:no-repeat;
+        background-size:cover;
+      }
+      img{
+        border: 2px solid black;
+        margin-left: 50px;
+      }
+      #images{
+        margin-left: 500px;
+        margin-top: 100px;
+      }
+      h1{
+        margin-left: 500px;
+      }
+    </style>
+    <script type="text/javascript">
+      onload = function(){
+        primera.addEventListener('click',enigmaUno);
+        primera.addEventListener('contextmenu',pistaUno);
+
+        segunda.addEventListener('click',enigmaDos);
+        segunda.addEventListener('contextmenu',pistaDos);
+
+        tercera.addEventListener('click',enigmaTres);
+        tercera.addEventListener('contextmenu',pistaTres);
+      }
+
+      var n = "";
+
+    function enigmaUno(){
+      primera.setAttribute("src", "aeropatin.jpg");
+      primera.setAttribute("width", 150);
+      primera.setAttribute("height", 225);
+      alert("Sé el más molón del barrio con este fantástico Aero-patín!!");
+
+      primera.removeEventListener('click',enigmaUno);
+      primera.removeEventListener('contextmenu',pistaUno);
+      primera.addEventListener('click',premio);
+      segunda.removeEventListener('click',enigmaDos);
+      segunda.removeEventListener('contextmenu',pistaDos);
+      segunda.addEventListener('click',premio);
+      tercera.removeEventListener('click',enigmaTres);
+      tercera.removeEventListener('contextmenu',pistaTres);
+      tercera.addEventListener('click',premio);
+
+      n = "aeropatin";
+    }
+
+    function enigmaDos(){
+      segunda.setAttribute("src", "yoda.png");
+      segunda.setAttribute("width", 150);
+      segunda.setAttribute("height", 225);
+      alert("Aprende a ser un Jedi con este alucinante curso impartido por el mismísimo Yoda!!");
+
+      primera.removeEventListener('click',enigmaUno);
+      primera.removeEventListener('contextmenu',pistaUno);
+      primera.addEventListener('click',premio);
+      segunda.removeEventListener('click',enigmaDos);
+      segunda.removeEventListener('contextmenu',pistaDos);
+      segunda.addEventListener('click',premio);
+      tercera.removeEventListener('click',enigmaTres);
+      tercera.removeEventListener('contextmenu',pistaTres);
+      tercera.addEventListener('click',premio);
+
+      n = "yoda";
+    }
+
+    function enigmaTres(){
+      tercera.setAttribute("src", "namek.jpg");
+      tercera.setAttribute("width", 150);
+      tercera.setAttribute("height", 225);
+      alert("Estás de suerte amigo, te ha tocado una maravillosa casa en Namek!!");
+
+      primera.removeEventListener('click',enigmaUno);
+      primera.removeEventListener('contextmenu',pistaUno);
+      primera.addEventListener('click',premio);
+      segunda.removeEventListener('click',enigmaDos);
+      segunda.removeEventListener('contextmenu',pistaDos);
+      segunda.addEventListener('click',premio);
+      tercera.removeEventListener('click',enigmaTres);
+      tercera.removeEventListener('contextmenu',pistaTres);
+      tercera.addEventListener('click',premio);
+
+      n = "namek";
+    }
+
+    function pistaUno(e){
+     e.preventDefault();
+     alert("McFly");
+   }
+
+   function pistaDos(e){
+     e.preventDefault();
+     alert("Mucho que aprender todavía tienes");
+   }
+
+   function pistaTres(e){
+     e.preventDefault();
+     alert("Un hogar de fantasía");
+   }
+
+   function premio(){
+     alert("Lo sentimos, pero ya has ganado: " +n);
+   }
+
+    </script>
+  </head>
+  <body>
+    <h1>Escoge tu regalo</h1>
+    <div id="images">
+      <img id="primera" src="https://i.pinimg.com/originals/7b/f8/9e/7bf89ed8b873c172093264143618808a.jpg" width="150px;">
+      <img id="segunda" src="https://i.pinimg.com/originals/7b/f8/9e/7bf89ed8b873c172093264143618808a.jpg" width="150px;">
+      <img id="tercera" src="https://i.pinimg.com/originals/7b/f8/9e/7bf89ed8b873c172093264143618808a.jpg" width="150px;">
+    </div>
+
+  </body>
+</html>
