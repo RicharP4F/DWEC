@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>U4 Práctica 2: Formulario</title>
+    <link rel="stylesheet" href="formulario.css">
+    <script type="text/javascript">
+      onload = function(){
+        var formulario = document.getElementById('formulario');
+        formulario.onsubmit = function(){
+          var err = document.getElementsByClassName('errores')[0];
+          var errList ="";
+          var ret = true;
+
+          //validamos el nombre
+          var nom = document.getElementsByName('nombre')[0].value;
+          console.log(nom);
+          if (nom == null || nom.length == 0 || !(/^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\s]*)+$/.test(nom))){
+            errList += "El nombre es erróneo <br/>"
+            ret = false;
+          }
+
+          //validamos apellidos:
+          var apellidos = document.getElementsByName('apellidos')[0].value;
+          console.log(apellidos);
+          if (apellidos == null || apellidos.length == 0 || !(/^\S+[\s?\S+]*$/.test(apellidos))){
+            errList += "Hay un error en los apellidos <br/>";
+            ret = false;
+
+          }
+
+          //Email
+          var email = document.getElementsByName('email')[0].value;
+          console.log(email);
+          if ( !/^\w+@\w+\.\w+$/.test(email) ){
+            errList += "El email es incorrecto <br/>";
+            ret = false;
+          }
+          var emailRepe = document.getElementById('emailRepe').value;
+          if(email != emailRepe){
+            errList += "El email repetido debe coincidir con el primer email que introdujo <br/>";
+            ret = false;
+          }
+
+          //DNI
+          var dni = document.getElementsByName('dni')[0].value;
+          console.log(apellidos);
+          if (!/^\d{8}[a-zA-Z]$/.test(dni)){
+            errList += "El DNI introducido no es válido <br/>";
+          }
+
+          //validamos la fecha
+          var fecha = (document.getElementsByName('fecha')[0].value).split('-');
+          var ano=fecha[0];
+          var mes=fecha[1];// de 0 a 11
+          var dia=fecha[2];// 1 a 31
+          console.log(dia + " " + mes + " " + " " + ano);
+          var nf= new Date(ano,(mes - 1),dia);
+          console.log(nf);
+
+          var hoy = new Date();
+          //resto los años de las dos fechas
+   	      var edad = hoy.getFullYear()- ano - 1; //-1 porque no se si ha cumplido años ya este año
+   	      //si resto los meses y me da mayor que 0, ha cumplido años
+   	      if (hoy.getMonth() + 1 - mes > 0){
+      	     edad++;
+           }
+   	       //si resto los dias y me da menor que 0 entonces no ha cumplido años.
+           //si da mayor o igual si ha cumplido
+   	       if (hoy.getUTCDate() - dia >= 0){
+      	      edad++;
+            }
+            console.log("Edad " + edad);
+            if ( isNaN(nf) || dia < 1 || dia > 31 || mes < 1 || mes > 12 || ano < 0 || ano >= hoy.getFullYear()){
+              errList += "La fecha es errónea <br/>"
+              ret = false;
+            }else if (edad < 18){
+              errList += "Debe ser mayor de edad para inscribirse <br/>"
+              ret = false;
+            }
+
+            //validamos la selección
+            var seccion = document.getElementsByName("seccion")[0].selectedIndex;
+            if (seccion == null || seccion == 0){
+              errList += "Escoja una sección favorita <br/>";
+              ret = false;
+            }
+
+            //validamos el radiobutton
+            var escogePago = formulario.pago.value;
+            console.log(escogePago);
+            if (escogePago != "efectivo" && escogePago != "tarjeta"){
+              ret = false;
+              errList += "Es necesario que indique si quiere pagar en efectivo o con tarjeta <br/>";
+            }
+
+            //Consultamos si se ha checqueado los check
+            if(!cond.checked){
+              ret = false;
+              errList += "Es necesario que acepte las condiciones <br/>";
+            }
+
+            if (selector.value == "discos"){
+              formulario.action="discos.html";
+            }
+            if (selector.value == "libros"){
+              formulario.action="libros.html";
+            }
+            if (selector.value == "tecnologia"){
+              formulario.action="tecnologia.html";
+            }
+
+
+            // Resultado de la validación.
+            if (ret){
+              //Si estamos aquí es que no ha habido ningún problema
+              document.getElementById("enviar").value = "Enviando...";
+              document.getElementById("enviar").disabled = true;
+              errList = "Tu petición se ha enviado correctamente";
+              err.style.color="blue";
+            }else{
+              err.style.color="red";
+            }
+
+            err.innerHTML = errList;
+
+            return ret;
+
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <form id="formulario" action="#" method="post" enctype="application/x-www-urlencoded">
+    <!--Zona info personal-->
+    <h1>Formulario alta</h1>
+    <fieldset>
+    <legend>Información personal</legend>
+    <div>
+    <label for="nombre">Nombre*:</label>
+    <input type="text" name="nombre" id="nombre" autofocus="autofocus" placeholder="Introduce el nombre..." onfocus="ponFoco(this);"></input>
+    </div>
+
+    <div>
+    <label for="apellidos">Apellidos*:</label>
+    <input type="text" name="apellidos" id="apellidos" onfocus="ponFoco(this);"></input>
+    </div>
+
+    <div>
+    <label for="email">Email*:</label>
+    <input type="email" name="email" id="email" onfocus="ponFoco(this);"></input>
+    </div>
+
+    <div>
+    <label for="email">Repetir email*:</label>
+    <input type="email" name="email" id="emailRepe" onfocus="ponFoco(this);"></input>
+    </div>
+
+    <div>
+    <label for="dni">DNI:</label>
+    <input type="text" name="dni" id="dni" onfocus="ponFoco(this);"></input>
+    </div>
+
+    <div id="inputFecha">
+    <label for="fecha">Fecha nacimiento*:</label>
+    <input type="date" name="fecha" id="fecha" onfocus="ponFoco(this);"></input>
+    </div>
+
+    <div id="seccion">
+    <label for="selector">Sección favorita*:</label>
+    <select name="seccion" id="selector" onfocus="ponFoco(this);">
+    <option value="0">Escoge una sección </option>
+    <option value="discos">Discos</option>
+    <option value="libros">Libros</option>
+    <option value="tecnologia">Tecnología</option>
+    </select>
+    </div>
+    <div>
+      <p>Modo preferente de pago*:</p>
+    </div>
+    <div id="radio">
+      <label for="efectivo">Efectivo
+      <input type="radio" name="pago" id="efectivo" value="efectivo"></input>
+      </label>
+      <label for="tarjeta">Tarjeta
+      <input type="radio" name="pago" id="tarjeta" value="tarjeta"></input>
+      </label>
+    </div>
+
+    </fieldset>
+
+    <!--Zona checks y aceptar-->
+    <label class="check">
+    <input type="checkbox" name="cond" id="cond"></input>
+    <p> Acepto las condiciones de alta</p>
+    </label>
+
+    <input type="submit" value="Enviar" id="enviar"></input>
+
+    <div id="nota">Nota: los campos marcados con "*" son obligatorios</div>
+
+    <!-- Incluyo un div vacío para poner los errores del formulario -->
+    <div class="errores"></div>
+    </form>
+
+    <script type="text/javascript">
+      function ponFoco(color){
+        color.style.outlineColor="#660066";
+      }
+    </script>
+
+  </body>
+</html>
