@@ -1,0 +1,55 @@
+<html>
+<head>
+<meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $("body").attr("align","center");
+    $("h1").css("border","2px solid blue");
+    $("h1").css("margin-left","200px");
+    $("h1").css("margin-right","200px");
+    $("img").attr("width","400");
+    $("img").hide();
+    $("button").hide();
+    var cont = true;
+    $("h1").click(function(){
+      if (cont == true){
+        $("h1").css("color","red");
+        $("h1").html("Haz click aquí para ocultar la imagen!");
+        $("button").show();
+        $("img").slideDown();
+
+        cont = false;
+      }else{
+        cont = true;
+        $("h1").css("color","black");
+        $("h1").html("Haz click aquí para desplegar la imagen!");
+        $("button").hide();
+        $("img").slideUp();
+      }
+    });
+
+    $("#masAncho").click(function(){
+      $("img").width($('img').width()+20);
+    });
+
+    $("#menosAncho").click(function(){
+      $("img").width($('img').width()-20);
+    });
+
+
+
+
+
+    });
+</script>
+</head>
+<body>
+ <h1>Haz click aquí para desplegar la imagen!</h1>
+ <div class="contenedor">
+ <img src="mundo.jpg">
+ <button id="masAncho">+</button>
+ <button id="menosAncho">-</button>
+ </div>
+</body>
+</html>

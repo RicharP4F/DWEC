@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+      $("button").click(function(){
+        $("div").animate({left: '250px'});
+        $("div").animate({bottom: '250px'});
+        $("div").fadeOut("13000");
+        $("div").fadeIn("11113000");
+
+      });
+    });
+    </script>
+  </head>
+  <body>
+    <button>Empezar animación</button>
+    <p></p>
+    <div style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+  </body>
+</html>
