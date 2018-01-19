@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Noticias</title>
+    <script type="text/javascript">
+    onload = function(){
+      if(window.XMLHttpRequest){
+        var xhr = new XMLHttpRequest();
+      }else if(ActiveXObject("Microsoft.XMLHTTP")){
+        var xhr = new ActiveXObject("Microsoft.XMLHTTP");
+      }
+
+        numrandom = Math.floor(Math.random()*4+1);
+        var url = "noticia"+numrandom+".txt";
+        xhr.open("GET",url, true);
+        xhr.onreadystatechange = muestraResultado;
+        xhr.send();
+      function muestraResultado(){
+        peticion.innerHTML += ("readyState: " + xhr.readyState + "<br>");
+        cabeceras.innerHTML += xhr.getAllResponseHeaders() + "<br>";
+        codigo.innerHTML += xhr.status + xhr.statusText + "<br>";
+        if(xhr.readyState == 4 && xhr.status == 200){
+          resultado.innerHTML = xhr.responseText;
+        }else if(xhr.status != 200){
+          alert(xhr.statusText);
+        }
+      }
+    }
+
+    </script>
+  </head>
+  <body>
+    <div id="resultado"><h2>Resultado</h2></div>
+    <div id="peticion"><h2>Peticion</h2></div>
+    <div id="cabeceras"><h2>Cabeceras</h2></div>
+    <div id="codigo"><h2>Codigo</h2></div>
+  </body>
+</html>

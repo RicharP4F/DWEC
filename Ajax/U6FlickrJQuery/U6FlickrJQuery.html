@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Plantilla básica JQuery Local</title>
+<script src="./js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("button").click(function(){
+      var valor = $("#selector").val();
+      var url = "https://api.flickr.com/services/feeds/photos_public.gne?tags=";
+      url += valor + "&format=json&jsoncallback=?";
+      $.getJSON(url,function(data,status,xhr){
+        // console.log(data.items);
+        var arrFotos = data.items;
+        $.each(arrFotos,function(i,item){
+          console.log("Imagen nº: " + i + " src= " + item.media.m);
+        });
+      });
+    });
+	});
+</script>
+</head>
+<body>
+  <h1>Mi Flickr</h1>
+  <div id="imagenes"></div>
+  <button>Dibujar</button>
+  <select id="selector">
+    <option value="landscapes">Paisajes</option>
+    <option value="puppys">Cachorros</option>
+    <option value="dog">Perritos</option>
+    <option value="iguana">Iguanas</option>
+  </select>
+</body>
+</html>
